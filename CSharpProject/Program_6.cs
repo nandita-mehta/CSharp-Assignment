@@ -11,8 +11,8 @@ namespace CSharpProject
         {
             Console.Write("Enter search query: ");
             string searchQuery = Console.ReadLine();
-            string apiKey = "AIzaSyARKgIa8fkkNT4UVUO3mCJ516h_CkfBLI4";
-            string cx = "3e28b6cceb6f221e7";
+            string apiKey = "";
+            string cx = "";
             WebRequest request = HttpWebRequest.Create("https://www.googleapis.com/customsearch/v1?key=" + apiKey + "&cx=" + cx + "&q=" + searchQuery);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
